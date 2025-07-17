@@ -32,6 +32,6 @@ jobs:
 
             - name: Debug GitHub Secrets and Environment Variables
               run: |
-                echo "WORKFLOW_NAME: ${{ secrets.WORKFLOW_NAME }}"
-                echo "REPO_NAME: ${{ secrets.REPO_NAME }}"
-                echo "WORKFLOW_RUN_ID: ${{ secrets.WORKFLOW_RUN_ID }}"
+                echo "WORKFLOW_NAME: ${{ github.workflow }}"
+                echo "REPO_NAME: ${{ github.repository }}"
+                echo "WORKFLOW_RUN_ID: ${{ github.run_id }}"
