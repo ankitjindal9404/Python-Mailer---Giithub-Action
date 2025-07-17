@@ -29,9 +29,3 @@ jobs:
                 SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
                 SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
                 RECIVER_EMAIL: ${{ secrets.RECIVER_EMAIL }}
-
-            - name: Debug GitHub Secrets and Environment Variables
-              run: |
-                echo "WORKFLOW_NAME: ${{ github.workflow }}"
-                echo "REPO_NAME: ${{ github.repository }}"
-                echo "WORKFLOW_RUN_ID: ${{ github.run_id }}"
