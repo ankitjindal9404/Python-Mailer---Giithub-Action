@@ -1,11 +1,7 @@
 import smtplib
-
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import os
-from dotenv import load_dotenv
-
-load_dotenv()  # Automatically loads .env file
 
 def send_email(workflow_name, repo_name, workflow_run_id):
     sender_email = os.getenv('SENDER_EMAIL')
